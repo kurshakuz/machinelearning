@@ -16,17 +16,26 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCostMulti) and gradient here.
     %
+    
+    predictions = X * theta;
+    
+    difference = predictions .- y;
 
+    x1 = X(:,1);
+    result1 = sum((difference) .* x1);
+    
+    x2 = X(:,2);
+    result2 = sum((difference) .* x2);
+    
+    x3 = X(:,3);
+    result3 = sum((difference) .* x3);
+    
+    theta_one = theta(1) - (alpha/m)*sum(result1);
+    theta_two = theta(2) - (alpha/m)*sum(result2);
+    theta_three = theta(3) - (alpha/m)*sum(result3);
+	  theta = [theta_one; theta_two; theta_three];
 
-
-
-
-
-
-
-
-
-
+    
     % ============================================================
 
     % Save the cost J in every iteration    
