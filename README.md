@@ -1,2 +1,2 @@
 # machinelearning
-my solutions to programming assignemnts from Coursera Machine Learning course at Stanford University
+my solutions to programming assignments from Coursera Machine Learning course at Stanford University
