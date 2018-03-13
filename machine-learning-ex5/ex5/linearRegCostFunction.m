@@ -20,6 +20,7 @@ grad = zeros(size(theta));
 %
 
 prediction = X * theta;
+
 sqrErrors = (prediction - y).^2;
 
 thetaTemp = [0 ; theta(2:size(theta), :)];
