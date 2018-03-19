@@ -48,7 +48,14 @@ x = zeros(n, 1);
 %
 %
 
-
+for i = 1:numel(x)
+    for k = 1:numel(word_indices)
+        if i == word_indices(k)
+            x(i) = 1;
+        end
+    end
+end
+    
 
 
 
