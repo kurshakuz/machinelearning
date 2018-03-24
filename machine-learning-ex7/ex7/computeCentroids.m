@@ -26,7 +26,17 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
-
+for i = 1:K
+    sum = zeros(1, n);
+    num = 0;
+    for o = 1:m
+        if idx(o) == i
+            num = num + 1;
+            sum = (sum + X(o, :));
+        end
+    end
+    centroids(i, :) = (sum./num);
+end
 
 
 

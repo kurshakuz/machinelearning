@@ -21,13 +21,22 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
-
-
-
+for i = 1:size(X, 1)
+    dif = [];
+    for o = 1:K
+        centroidsTemp = ((X(i, :) - centroids(o, :)));
+        dif = [dif; (centroidsTemp * centroidsTemp')];
+    end
+    [difmin, location] = min(dif);
+    for p = 1:numel(dif)
+        if p == location
+            idx(i) = p;
+        end
+    end
+end
 
 
 
 % =============================================================
 
 end
-
