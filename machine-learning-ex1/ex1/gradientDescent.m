@@ -30,6 +30,8 @@ for iter = 1:num_iters
     theta_two = theta(2) - (alpha/m)*sum(result2);
     
     theta = [theta_one; theta_two];
+    
+
 
     
 
