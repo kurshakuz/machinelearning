@@ -45,9 +45,16 @@ squaredDif = (dif.^2);
 sumOfSquaredDif = sum(squaredDif(R == 1));
 
 J = (1/2)*sumOfSquaredDif;
+J1 = sum(sum(X.^2));
+J2 = sum(sum(Theta.^2));
+
+J = J + (lambda/2)*(J1+J2);
 
 X_grad = (dif.*R) * Theta;
 Theta_grad = (dif.*R)' * X;
+
+X_grad = X_grad + lambda * X;
+Theta_grad = Theta_grad + lambda * Theta;
 
 
 % =============================================================
