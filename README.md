@@ -1,7 +1,7 @@
 # machinelearning
 My solutions to programming assignments from Coursera Machine Learning course at Stanford University by Andrew Ng
 
-Each folder is a solution pack with all methods to corresponding weeks as follows:
+Each folder is a solution pack with all algorithms to corresponding weeks as follows:
 
 1) Linear Regression with Multiple Variables
 2) Logistic Regression and Regularization
