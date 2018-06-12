@@ -39,8 +39,7 @@ Theta_grad = zeros(size(Theta));
 %        Theta_grad - num_users x num_features matrix, containing the 
 %                     partial derivatives w.r.t. to each element of Theta
 %
-
-dif = X*Theta' - Y;
+dif = (X * Theta') - Y;
 squaredDif = (dif.^2);
 sumOfSquaredDif = sum(squaredDif(R == 1));
 
